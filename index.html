@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="./output.css" />
-    <link rel="shortcut icon" href="../public/Logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="shortcut icon" href="./public/Logo.png" type="image/x-icon" />
   </head>
   <body
     class="bg-[#13151a] h-screen min-w-[400px] box-border transition-all duration-300"
@@ -47,21 +47,21 @@
           >
             <li>
               <a
-                href="../public/app.html"
+                href="./public/app.html"
                 class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-xl cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
                 >App</a
               >
             </li>
             <li>
               <a
-                href="../dist/index.html"
+                href="./dist/index.html"
                 class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-xl cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
                 >About</a
               >
             </li>
             <li>
               <a
-                href="../public/contact.html"
+                href="./public/contact.html"
                 class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-lg cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
                 >Contatc</a
               >
@@ -103,13 +103,13 @@
           <img
             id="heroPic"
             class="w-full h-full md:w-auto md:h-[30rem] transition-all duration-300 p-5"
-            src="../src/assets/weather-hero.svg"
+            src="./src/assets/weather-hero.svg"
             alt=""
           />
           <a
             id="headerBtn"
             class="group relative bottom-0 left-[32%] -top-[5%] md:hidden inline-block bg-[#13151a]/40 overflow-hidden border border-[#AAFF01] rounded-md px-6 py-2 focus:outline-none focus:ring transition-all duration-300"
-            href="../public/app.html"
+            href="./public/app.html"
           >
             <span
               class="absolute inset-y-0 left-0 w-[2px] bg-[#AAFF01] transition-all duration-300 group-hover:w-full group-active:bg-[#E5FCAB]"
@@ -135,7 +135,7 @@
           </p>
           <a
             class="group relative hidden md:inline-block overflow-hidden border border-[#AAFF01] rounded-md px-6 py-2 focus:outline-none focus:ring transition-all duration-300"
-            href="../public/app.html"
+            href="./public/app.html"
           >
             <span
               class="absolute inset-y-0 left-0 w-[2px] bg-[#AAFF01] transition-all duration-300 group-hover:w-full group-active:bg-[#E5FCAB]"
@@ -223,11 +223,11 @@
         <ul
           class="flex h-8 items-center [&>li]:mx-[5px] [&>li]:h-full [&>li]:flex [&>li]:items-center [&>li>a]:p-1 hover:[&>li>a]:text-[#AAFF01] [&>li>a]:transition-colors [&>li>a]:duration-300"
         >
-          <li><a href="">About</a></li>
+          <li><a href="/index.html">About</a></li>
           <span class="text-[#AAFF01] text-2xl">·</span>
-          <li><a href="">App</a></li>
+          <li><a href="/public/app.html">App</a></li>
           <span class="text-[#AAFF01] text-2xl">·</span>
-          <li><a href="">Contact</a></li>
+          <li><a href="public/contact.html">Contact</a></li>
         </ul>
         <p class="flex items-center opacity-60 pr-2">
           Designed with ❤️ by <span class="text-[#AAFF01] text-2xl"> · </span>
@@ -236,6 +236,6 @@
         </p>
       </footer>
     </div>
-    <script src="../src/index.js"></script>
+    <script src="./src/index.js"></script>
   </body>
 </html>
