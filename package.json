@@ -1,0 +1,18 @@
+{
+  "author": "Ali AlPes",
+  "description": "App with a key protected API",
+  "keywords": [
+    "API",
+    "WeatherApp",
+    "HTML",
+    "TailwindCSS",
+    "JavaScript"
+  ],
+  "license": "ISC",
+  "main": "tailwind.config.js",
+  "name": "weatherapp",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "version": "1.0.0"
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="shortcut icon" href="../public/Logo.png" type="image/x-icon" />
+  </head>
+  <body
+    class="bg-[#13151a] h-screen min-w-[400px] box-border transition-all duration-300"
+  >
+    <div class="w-full md:w-4/5 h-full flex flex-col justify-center mx-auto">
+      <div id="navContainer" class="pt-3">
+        <nav
+          id="navBar"
+          class="w-full h-12 flex justify-between items-center transition-all duration-300"
+        >
+          <div
+            class="flex flex-grow md:grow-0 self-start md:justify-start md:self-center"
+          >
+            <a
+              id="navLogo"
+              href="../dist/index.html"
+              class="flex items-center text-4xl font-semibold whitespace-nowrap text-[#E5FCAB] hover:text-[#AAFF01] transition-all duration-300 ease-in-out hover:scale-100 scale-90 opacity-70 hover:opacity-100 ml-[5px] md:ml-0"
+            >
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                stroke-width="5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"
+                ></path></svg
+              >lPes
+            </a>
+          </div>
+          <ul
+            id="navMenu"
+            class="flex -translate-y-[10rem] transition-transform md:translate-y-0 md:flex flex-col md:flex-row items-center md:items-center duration-300"
+          >
+            <li>
+              <a
+                href="../public/app.html"
+                class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-xl cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
+                >App</a
+              >
+            </li>
+            <li>
+              <a
+                href="../dist/index.html"
+                class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-xl cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../public/contact.html"
+                class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-lg cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="self-start flex flex-grow justify-end md:hidden">
+            <a
+              id="toggleMenu"
+              class="text-4xl font-semibold whitespace-nowrap p-2 text-[#E5FCAB] hover:text-[#AAFF01] transition-all duration-300 ease-in-out hover:scale-100 scale-90 opacity-70 hover:opacity-100 cursor-pointer box-border"
+            >
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M7 16a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-12"
+                ></path>
+                <path d="M5 20l14 0"></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </div>
+      <main class="text-[#91D901] mb-0">
+        <div id="leftSection" class="grid grid-cols-1 justify-items-center">
+          <div
+            class="h-14 w-[400px] flex justify-center items-center mx-1 p-2 transition-colors duration-200"
+          >
+            <input
+              type="text"
+              name="inputCity"
+              id="inputCity"
+              placeholder="Search"
+              class="h-full outline-none border-[#E5FCAB] focus:text-[#91D901] border-2 bg-transparent focus:border-[#91D901] rounded-tl-xl text-center text-xl"
+            />
+            <svg
+              id="searchBtn"
+              class="h-full w-10 py-1 px-2 rounded-tr-xl transition-all duration-200 cursor-pointer bg-[#E5FCAB] hover:bg-[#91D901] text-[#13151a] active:scale-90"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M11 18.004h-4.343c-2.572 -.004 -4.657 -2.011 -4.657 -4.487c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99"
+              ></path>
+              <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+              <path d="M20.2 20.2l1.8 1.8"></path>
+            </svg>
+          </div>
+        </div>
+        <div id="rightSection" class="grid grid-cols-1 justify-items-center">
+          <div
+            class="h-14 w-[400px] rounded-t-2xl my-2 gap-4 flex justify-center items-center bg-gradient-to-l from-[#13151a] via-[#91D901]/30 to-[#91D901]/80"
+          >
+            <h2 id="showCity" class="text-4xl text-[#13151a] font-bold">
+              GUAYAQUIL
+            </h2>
+            <img
+              id="flagPic"
+              src="https://flagicons.lipis.dev/flags/4x3/ec.svg"
+              alt="flag-pic"
+              class="h-8 w-8 rounded-lg"
+            />
+          </div>
+          <div
+            class="w-[400px] h-[160px] bg-gradient-to-r from-[#13151a] via-[#91D901]/30 to-[#91D901]/80 rounded-b-2xl grid grid-cols-2 items-center justify-items-center"
+          >
+            <img
+              id="weatherPic"
+              src="../src/assets/02d.png"
+              alt="weather-pic"
+              class="h-full py-2"
+            />
+            <div class="flex flex-col items-center">
+              <p id="today" class="text-white">Monday</p>
+              <p id="temperature" class="text-[#13151a] text-6xl font-bold">
+                22°C
+              </p>
+              <p id="weatherStatus" class="text-white">Clear Sky</p>
+            </div>
+          </div>
+          <div class="w-[400px] h-[160px] mt-4 grid grid-cols-3 gap-4">
+            <div
+              class="flex flex-col justify-center items-center bg-gradient-to-b rounded-b-2xl from-[#13151A] via-[#91D901]/30 to-[#91D901]/80 text-white"
+            >
+              <svg
+                class="p-[5px]"
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M4.072 20.3a2.999 2.999 0 0 0 3.856 0a3.002 3.002 0 0 0 .67 -3.798l-2.095 -3.227a.6 .6 0 0 0 -1.005 0l-2.098 3.227a3.003 3.003 0 0 0 .671 3.798z"
+                ></path>
+                <path
+                  d="M16.072 20.3a2.999 2.999 0 0 0 3.856 0a3.002 3.002 0 0 0 .67 -3.798l-2.095 -3.227a.6 .6 0 0 0 -1.005 0l-2.098 3.227a3.003 3.003 0 0 0 .671 3.798z"
+                ></path>
+                <path
+                  d="M10.072 10.3a2.999 2.999 0 0 0 3.856 0a3.002 3.002 0 0 0 .67 -3.798l-2.095 -3.227a.6 .6 0 0 0 -1.005 0l-2.098 3.227a3.003 3.003 0 0 0 .671 3.798z"
+                ></path>
+              </svg>
+              <p class="text-3xl mt-1" id="humidity">67%</p>
+              <p>Humidity</p>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center bg-gradient-to-t rounded-b-2xl from-[#13151A] via-[#91D901]/30 to-[#91D901]/80 text-[white]/75"
+            >
+              <p>
+                <span id="showHour" class="text-xl">02</span>:<span
+                  id="showMinutes"
+                  class="text-xl"
+                  >05</span
+                >
+              </p>
+              <p id="showDate" class="text-4xl mt-1">29</p>
+              <p>
+                <span id="showMonth" class="text-xl">Sept.</span>
+                <span id="showYear" class="text-xl">2023</span>
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center bg-gradient-to-b rounded-b-2xl from-[#13151A]/10 via-[#91D901]/30 to-[#91D901]/80 text-[white]/75"
+            >
+              <svg
+                class="p-[5px]"
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 8h8.5a2.5 2.5 0 1 0 -2.34 -3.24"></path>
+                <path d="M3 12h15.5a2.5 2.5 0 1 1 -2.34 3.24"></path>
+                <path d="M4 16h5.5a2.5 2.5 0 1 1 -2.34 3.24"></path>
+              </svg>
+              <p class="text-3xl mt-1" id="windSpeed">18 km/h</p>
+              <p class="">Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        id="footer"
+        class="flex flex-col md:flex-row md:justify-between justify-center items-center h-[120px] md:h-20 border-t-[1px] border-[#E5FCAB]/10 text-[#E5FCAB] mt-auto"
+      >
+        <ul
+          id="socialContainer"
+          class="flex h-10 items-center [&>li]:mx-1 [&>li]:h-full [&>li]:flex [&>li]:items-center [&>li>a]:p-2 hover:[&>li>a]:bg-[#E5FCAB]/30 hover:[&>li>a]:text-[#AAFF01] [&>li>a]:rounded-full [&>li>a]:transition-colors [&>li>a]:duration-300"
+        >
+          <li>
+            <a href="">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+                ></path>
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                <path d="M16.5 7.5l0 .01"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                ></path>
+                <path d="M8 11l0 5"></path>
+                <path d="M8 8l0 .01"></path>
+                <path d="M12 16l0 -5"></path>
+                <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <ul
+          class="flex h-8 items-center [&>li]:mx-[5px] [&>li]:h-full [&>li]:flex [&>li]:items-center [&>li>a]:p-1 hover:[&>li>a]:text-[#AAFF01] [&>li>a]:transition-colors [&>li>a]:duration-300"
+        >
+          <li><a href="">About</a></li>
+          <span class="text-[#AAFF01] text-2xl">·</span>
+          <li><a href="">App</a></li>
+          <span class="text-[#AAFF01] text-2xl">·</span>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <p class="flex items-center opacity-60 pr-2">
+          Designed with 💚 by <span class="text-[#AAFF01] text-2xl"> · </span>
+          <b class="text-[#AAFF01]"> AlPes </b>
+          <span class="text-[#AAFF01] text-2xl"> ·</span>
+        </p>
+      </footer>
+    </div>
+    <script src="../src/app.js"></script>
+  </body>
+</html>
