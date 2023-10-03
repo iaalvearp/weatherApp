@@ -3,9 +3,6 @@ const toggleMenu = document.getElementById("toggleMenu");
 const navMenu = document.getElementById("navMenu");
 const navLogo = document.getElementById("navLogo");
 const navBar = document.getElementById("navBar");
-const headerContainer = document.getElementById("headerContainer");
-const heroPic = document.getElementById("heroPic");
-const headerBtn = document.getElementById("headerBtn");
 
 toggleMenu.addEventListener("click", () => {
   navMenu.classList.forEach((classT) => {
@@ -115,6 +112,8 @@ searchBtn.addEventListener("click", () => {
           weatherPic.src = "../src/assets/09.png";
         if (data.weather[0].icon === "10d")
           weatherPic.src = "../src/assets/10d.png";
+        if (data.weather[0].icon === "10n")
+          weatherPic.src = "../src/assets/10n.png";
         if (data.weather[0].icon === "11d" && data.weather[0].icon === "11n")
           weatherPic.src = "../src/assets/11.png";
         if (data.weather[0].icon === "13d" && data.weather[0].icon === "13n")
@@ -124,6 +123,7 @@ searchBtn.addEventListener("click", () => {
       }
       if (data && flagPic)
         flagPic.src = `https://flagicons.lipis.dev/flags/4x3/${cityCode}.svg`;
+      weatherStatus.textContent = data.weather[0].main;
     })
     .catch((err) => console.log(err));
 });

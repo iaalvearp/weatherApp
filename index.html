@@ -8,16 +8,16 @@
     <link rel="shortcut icon" href="./public/Logo.png" type="image/x-icon" />
   </head>
   <body
-    class="bg-[#13151a] h-screen min-w-[400px] box-border transition-all duration-300"
+    class="bg-[#13151a] h-screen min-w-[320px] box-border transition-all duration-300"
   >
-    <div class="w-full md:w-4/5 h-full flex flex-col justify-center mx-auto">
+    <div class="w-full md:w-4/5 h-auto flex flex-col justify-center mx-auto">
       <div id="navContainer" class="pt-3">
         <nav
           id="navBar"
           class="w-full h-12 flex justify-between items-center transition-all duration-300"
         >
           <div
-            class="flex flex-grow md:grow-0 self-start md:justify-start md:self-center"
+            class="flex flex-grow h-full md:grow-0 self-start md:justify-start md:self-center"
           >
             <a
               id="navLogo"
@@ -63,14 +63,14 @@
               <a
                 href="./public/contact.html"
                 class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-lg cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
-                >Contatc</a
+                >Contact</a
               >
             </li>
           </ul>
-          <div class="self-start flex flex-grow justify-end md:hidden">
+          <div class="h-full self-start flex flex-grow justify-end md:hidden">
             <a
               id="toggleMenu"
-              class="text-4xl font-semibold whitespace-nowrap p-2 text-[#E5FCAB] hover:text-[#AAFF01] transition-all duration-300 ease-in-out hover:scale-100 scale-90 opacity-70 hover:opacity-100 cursor-pointer box-border"
+              class="text-4xl h-full font-semibold whitespace-nowrap p-2 text-[#E5FCAB] hover:text-[#AAFF01] transition-all duration-300 ease-in-out hover:scale-100 scale-90 opacity-70 hover:opacity-100 cursor-pointer box-border"
             >
               <svg
                 width="36"
@@ -94,47 +94,35 @@
       </div>
       <header
         id="headerContainer"
-        class="w-full md:h-[30rem] grid grid-rows-[auto_auto_auto] md:grid-rows-1 grid-cols-[auto] md:grid-cols-2 blur-0 transition-all duration-300 md:items-center justify-items-center opacity-100"
+        class="w-full h-auto md:h-full grid grid-rows-[auto_auto_auto] md:grid-rows-[auto] grid-cols-1 md:grid-cols-2 justify-items-center md:justify-items-end blur-0 transition-all duration-300 md:items-center opacity-100"
       >
         <div
           id="heroPicContainer"
-          class="max-h-[35rem] max-w-[35rem] row-start-3 row-end-4 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2"
+          class="flex items-center max-h-[35rem] md:h-full max-w-[35rem] min-[500px]:min-h-[520px] min-w-[320px] min-h-[380px] row-start-3 row-end-4 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2"
         >
           <img
             id="heroPic"
-            class="w-full h-full md:w-auto md:h-[30rem] transition-all duration-300 p-5"
+            class="w-full md:w-auto h-full md:h-full transition-all duration-300 p-5"
             src="./src/assets/weather-hero.svg"
             alt=""
           />
-          <a
-            id="headerBtn"
-            class="group relative bottom-0 left-[32%] -top-[5%] md:hidden inline-block bg-[#13151a]/40 overflow-hidden border border-[#AAFF01] rounded-md px-6 py-2 focus:outline-none focus:ring transition-all duration-300"
-            href="./public/app.html"
-          >
-            <span
-              class="absolute inset-y-0 left-0 w-[2px] bg-[#AAFF01] transition-all duration-300 group-hover:w-full group-active:bg-[#E5FCAB]"
-            ></span>
-
-            <span
-              class="relative text-sm font-medium text-[#AAFF01] transition-colors duration-300 group-hover:text-[#13151a]"
-            >
-              Check Weather
-            </span>
-          </a>
         </div>
-        <div id="titleContainer" class="md:flex md:flex-col md:items-end gap-3">
+        <div
+          id="titleContainer"
+          class="flex flex-col items-center md:items-end gap-3 col-start-1 col-end-2 md:col-start-2 md:col-end-3 md:pr-4"
+        >
           <h1
             class="row-start-1 row-end-2 text-center md:text-start text-3xl text-[#AAFF01] md:col-start-2 md:col-end-3"
           >
             Weather App
           </h1>
           <p
-            class="row-start-2 row-end-3 md:row-start-1 md:row-end-2 text-center md:text-start text-xl text-[#E5FCAB] md:col-start-2 md:col-end-3"
+            class="row-start-2 row-end-3 md:row-start-1 md:row-end-2 col-start-1 col-end-2 md:col-start-2 md:col-end-3 text-center md:text-start text-xl text-[#E5FCAB] px-8 md:px-0"
           >
             Connecting You to Global Weather
           </p>
           <a
-            class="group relative hidden md:inline-block overflow-hidden border border-[#AAFF01] rounded-md px-6 py-2 focus:outline-none focus:ring transition-all duration-300"
+            class="group relative inline-block overflow-hidden border border-[#AAFF01] rounded-md px-6 py-2 focus:outline-none focus:ring transition-all duration-300"
             href="./public/app.html"
           >
             <span
@@ -158,7 +146,7 @@
           class="flex h-10 items-center [&>li]:mx-1 [&>li]:h-full [&>li]:flex [&>li]:items-center [&>li>a]:p-2 hover:[&>li>a]:bg-[#E5FCAB]/30 hover:[&>li>a]:text-[#AAFF01] [&>li>a]:rounded-full [&>li>a]:transition-colors [&>li>a]:duration-300"
         >
           <li>
-            <a href="">
+            <a href="https://twitter.com/">
               <svg
                 width="24"
                 height="24"
@@ -176,7 +164,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="https://www.instagram.com/">
               <svg
                 width="24"
                 height="24"
@@ -197,7 +185,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="https://www.linkedin.com/">
               <svg
                 width="24"
                 height="24"
@@ -223,14 +211,14 @@
         <ul
           class="flex h-8 items-center [&>li]:mx-[5px] [&>li]:h-full [&>li]:flex [&>li]:items-center [&>li>a]:p-1 hover:[&>li>a]:text-[#AAFF01] [&>li>a]:transition-colors [&>li>a]:duration-300"
         >
-          <li><a href="/index.html">About</a></li>
+          <li><a href="../index.html">About</a></li>
           <span class="text-[#AAFF01] text-2xl">·</span>
-          <li><a href="/public/app.html">App</a></li>
+          <li><a href="../public/app.html">App</a></li>
           <span class="text-[#AAFF01] text-2xl">·</span>
-          <li><a href="public/contact.html">Contact</a></li>
+          <li><a href="../public/contact.html">Contact</a></li>
         </ul>
         <p class="flex items-center opacity-60 pr-2">
-          Designed with ❤️ by <span class="text-[#AAFF01] text-2xl"> · </span>
+          Designed with 💚 by <span class="text-[#AAFF01] text-2xl"> · </span>
           <b class="text-[#AAFF01]"> AlPes </b>
           <span class="text-[#AAFF01] text-2xl"> ·</span>
         </p>
