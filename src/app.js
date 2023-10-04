@@ -3,16 +3,21 @@ const toggleMenu = document.getElementById("toggleMenu");
 const navMenu = document.getElementById("navMenu");
 const navLogo = document.getElementById("navLogo");
 const navBar = document.getElementById("navBar");
+const mainContainer = document.getElementById("mainContainer");
 
 toggleMenu.addEventListener("click", () => {
   navMenu.classList.forEach((classT) => {
     if (classT === "-translate-y-[10rem]") {
       navMenu.classList.replace("-translate-y-[10rem]", "translate-y-20");
       navBar.classList.replace("h-12", "h-auto");
+      mainContainer.classList.replace("blur-0", "blur");
+      mainContainer.classList.replace("mb-0", "mb-10");
     }
     if (classT === "translate-y-20") {
       navMenu.classList.replace("translate-y-20", "-translate-y-[10rem]");
       navBar.classList.replace("h-auto", "h-12");
+      mainContainer.classList.replace("blur", "blur-0");
+      mainContainer.classList.replace("mb-10", "mb-0");
     }
   });
 });
@@ -93,8 +98,8 @@ searchBtn.addEventListener("click", () => {
       if (data && temperature)
         temperature.textContent = `${parseInt(data.main.temp)}°C`;
       if (data && windSpeed)
-        windSpeed.textContent = `${parseInt(data.wind.speed)} Km/h`;
-      if (data && humidity) humidity.textContent = `${data.main.humidity}%`;
+        windSpeed.textContent = `${parseInt(data.wind.speed)}`;
+      if (data && humidity) humidity.textContent = `${data.main.humidity}`;
       if (data && weatherPic) {
         if (data.weather[0].icon === "01d")
           weatherPic.src = "../src/assets/01d.png";

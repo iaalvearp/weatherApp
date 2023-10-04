@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../public/Logo.png" type="image/x-icon" />
   </head>
   <body
-    class="bg-[#13151a] h-screen min-w-[400px] box-border transition-all duration-300"
+    class="bg-[#13151a] h-screen min-w-[320px] box-border transition-all duration-300"
   >
     <div class="w-full md:w-4/5 h-full flex flex-col justify-center mx-auto">
       <div id="navContainer" class="pt-3">
@@ -37,8 +37,9 @@
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path
                   d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"
-                ></path></svg
-              >lPes
+                ></path>
+              </svg>
+              lPes
             </a>
           </div>
           <ul
@@ -92,21 +93,24 @@
           </div>
         </nav>
       </div>
-      <main class="text-[#91D901] mb-0">
-        <div id="leftSection" class="grid grid-cols-1 justify-items-center">
+      <main
+        id="mainContainer"
+        class="text-[#91D901] px-5 md:px-0 min-w-[320px] w-full blur-0 mb-0"
+      >
+        <div id="searchSection" class="grid grid-cols-1 justify-items-center">
           <div
-            class="h-14 w-[400px] flex justify-center items-center mx-1 p-2 transition-colors duration-200"
+            class="h-14 w-full min-w-[320px] flex justify-center items-center mx-1 p-2 transition-colors duration-200"
           >
             <input
               type="text"
               name="inputCity"
               id="inputCity"
               placeholder="Search"
-              class="h-full outline-none border-[#E5FCAB] focus:text-[#91D901] border-2 bg-transparent focus:border-[#91D901] rounded-tl-xl text-center text-xl"
+              class="h-full outline-none border-[#E5FCAB] focus:text-[#91D901] border-2 bg-transparent focus:border-[#91D901] rounded-tl-xl rounded-bl-xl text-center text-xl"
             />
             <svg
               id="searchBtn"
-              class="h-full w-10 py-1 px-2 rounded-tr-xl transition-all duration-200 cursor-pointer bg-[#E5FCAB] hover:bg-[#91D901] text-[#13151a] active:scale-90"
+              class="h-full min-w-[40px] py-1 px-2 rounded-tr-xl rounded-br-xl transition-all duration-200 cursor-pointer bg-[#E5FCAB] hover:bg-[#91D901] text-[#13151a] active:scale-90"
               width="40"
               height="40"
               viewBox="0 0 24 24"
@@ -125,11 +129,14 @@
             </svg>
           </div>
         </div>
-        <div id="rightSection" class="grid grid-cols-1 justify-items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
           <div
-            class="h-14 w-[400px] rounded-t-2xl my-2 gap-4 flex justify-center items-center bg-gradient-to-l from-[#13151a] via-[#91D901]/30 to-[#91D901]/80"
+            class="h-14 w-full min-w-[320px] rounded-t-2xl my-2 gap-4 flex justify-center items-center bg-gradient-to-l from-[#13151a] via-[#91D901]/30 to-[#91D901]/80 md:col-start-1 md:col-end-2"
           >
-            <h2 id="showCity" class="text-4xl text-[#13151a] font-bold">
+            <h2
+              id="showCity"
+              class="text-2xl md:text-4xl text-[#13151a] font-bold"
+            >
               GUAYAQUIL
             </h2>
             <img
@@ -140,7 +147,7 @@
             />
           </div>
           <div
-            class="w-[400px] h-[160px] bg-gradient-to-r from-[#13151a] via-[#91D901]/30 to-[#91D901]/80 rounded-b-2xl grid grid-cols-2 items-center justify-items-center"
+            class="w-full min-w-[320px] h-[160px] md:h-full bg-gradient-to-r from-[#13151a] via-[#91D901]/30 to-[#91D901]/80 rounded-b-2xl grid grid-cols-2 md:grid-cols-1 items-center justify-items-center md:col-start-1 md:col-end-2 md:py-5"
           >
             <img
               id="weatherPic"
@@ -156,14 +163,16 @@
               <p id="weatherStatus" class="text-white">Clear Sky</p>
             </div>
           </div>
-          <div class="w-[400px] h-[160px] mt-4 grid grid-cols-3 gap-4">
+          <div
+            class="w-full min-w-[320px] h-[160px] md:h-full mt-4 md:mt-0 grid grid-cols-3 md:grid-cols-2 md:grid-rows-5 gap-4 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3"
+          >
             <div
-              class="flex flex-col justify-center items-center bg-gradient-to-b rounded-b-2xl from-[#13151A] via-[#91D901]/30 to-[#91D901]/80 text-white"
+              class="flex flex-col justify-center items-center bg-gradient-to-b rounded-b-2xl from-[#13151A] via-[#91D901]/30 to-[#91D901]/80 text-white md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-4"
             >
               <svg
-                class="p-[5px]"
-                width="60"
-                height="60"
+                class="p-[5px] min-w-[40px]"
+                width="50"
+                height="50"
                 viewBox="0 0 24 24"
                 stroke-width="2"
                 stroke="currentColor"
@@ -182,11 +191,14 @@
                   d="M10.072 10.3a2.999 2.999 0 0 0 3.856 0a3.002 3.002 0 0 0 .67 -3.798l-2.095 -3.227a.6 .6 0 0 0 -1.005 0l-2.098 3.227a3.003 3.003 0 0 0 .671 3.798z"
                 ></path>
               </svg>
-              <p class="text-3xl mt-1" id="humidity">67%</p>
+              <div class="flex mt-1 items-center">
+                <p class="text-3xl mt-1" id="humidity">67</p>
+                <p>%</p>
+              </div>
               <p>Humidity</p>
             </div>
             <div
-              class="flex flex-col justify-center items-center bg-gradient-to-t rounded-b-2xl from-[#13151A] via-[#91D901]/30 to-[#91D901]/80 text-[white]/75"
+              class="flex flex-col justify-center items-center bg-gradient-to-t rounded-b-2xl from-[#13151A] via-[#91D901]/30 to-[#91D901]/80 text-[white]/75 md:col-start-1 md:col-end-3 md:row-start-4 md:row-end-6"
             >
               <p>
                 <span id="showHour" class="text-xl">02</span>:<span
@@ -202,12 +214,12 @@
               </p>
             </div>
             <div
-              class="flex flex-col justify-center items-center bg-gradient-to-b rounded-b-2xl from-[#13151A]/10 via-[#91D901]/30 to-[#91D901]/80 text-[white]/75"
+              class="flex flex-col justify-center items-center bg-gradient-to-b rounded-b-2xl from-[#13151A]/10 via-[#91D901]/30 to-[#91D901]/80 text-[white] md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-4"
             >
               <svg
-                class="p-[5px]"
-                width="60"
-                height="60"
+                class="p-[5px] min-w-[40px]"
+                width="50"
+                height="50"
                 viewBox="0 0 24 24"
                 stroke-width="2"
                 stroke="currentColor"
@@ -220,7 +232,10 @@
                 <path d="M3 12h15.5a2.5 2.5 0 1 1 -2.34 3.24"></path>
                 <path d="M4 16h5.5a2.5 2.5 0 1 1 -2.34 3.24"></path>
               </svg>
-              <p class="text-3xl mt-1" id="windSpeed">18 km/h</p>
+              <div class="flex mt-1 items-center">
+                <p class="text-3xl" id="windSpeed">18</p>
+                <p>k/m</p>
+              </div>
               <p class="">Wind Speed</p>
             </div>
           </div>
