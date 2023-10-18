@@ -4,6 +4,7 @@ const navMenu = document.getElementById("navMenu");
 const navLogo = document.getElementById("navLogo");
 const navBar = document.getElementById("navBar");
 const mainContainer = document.getElementById("mainContainer");
+const gadgetsContainer = document.getElementById("gadgetsContainer");
 
 toggleMenu.addEventListener("click", () => {
   navMenu.classList.forEach((classT) => {
@@ -12,12 +13,14 @@ toggleMenu.addEventListener("click", () => {
       navBar.classList.replace("h-12", "h-auto");
       mainContainer.classList.replace("blur-0", "blur");
       mainContainer.classList.replace("mb-0", "mb-10");
+      gadgetsContainer.classList.replace("grid", "hidden");
     }
     if (classT === "translate-y-20") {
       navMenu.classList.replace("translate-y-20", "-translate-y-[10rem]");
       navBar.classList.replace("h-auto", "h-12");
       mainContainer.classList.replace("blur", "blur-0");
       mainContainer.classList.replace("mb-10", "mb-0");
+      gadgetsContainer.classList.replace("hidden", "grid");
     }
   });
 });
@@ -79,6 +82,8 @@ const showActualDate = () => {
   showMonth.textContent = months[time.getMonth()];
   showYear.textContent = time.getFullYear();
 };
+
+body.addEventListener("onLoad", showActualDate());
 
 // Fetching Code
 

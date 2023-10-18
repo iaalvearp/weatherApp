@@ -4,24 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="./dist/output.css" />
-    <link rel="shortcut icon" href="./public/Logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="shortcut icon" href="../public/Logo.png" type="image/x-icon" />
   </head>
-  <body
-    class="bg-[#13151a] h-screen min-w-[320px] box-border transition-all duration-300"
-  >
-    <div class="w-full md:w-4/5 h-auto flex flex-col justify-center mx-auto">
+  <body class="bg-[#13151a] min-h-screen min-w-full box-border">
+    <div
+      class="w-full md:w-4/5 h-full md:h-screen flex flex-col justify-center mx-auto"
+    >
       <div id="navContainer" class="pt-3">
         <nav
           id="navBar"
           class="w-full h-12 flex justify-between items-center transition-all duration-300"
         >
           <div
-            class="flex flex-grow h-full md:grow-0 self-start md:justify-start md:self-center"
+            class="flex flex-grow md:grow-0 self-start md:justify-start md:self-center"
           >
             <a
               id="navLogo"
-              href="./index.html"
+              href="../index.html"
               class="flex items-center text-4xl font-semibold whitespace-nowrap text-[#E5FCAB] hover:text-[#AAFF01] transition-all duration-300 ease-in-out hover:scale-100 scale-90 opacity-70 hover:opacity-100 ml-[5px] md:ml-0"
             >
               <svg
@@ -48,30 +48,30 @@
           >
             <li>
               <a
-                href="./index.html"
+                href="../index.html"
                 class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-xl cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
                 >Home</a
               >
             </li>
             <li>
               <a
-                href="./public/app.html"
+                href="./app.html"
                 class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-xl cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
                 >App</a
               >
             </li>
             <li>
               <a
-                href="./public/about.html"
+                href="./about.html"
                 class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-lg cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
                 >About</a
               >
             </li>
           </ul>
-          <div class="h-full self-start flex flex-grow justify-end md:hidden">
+          <div class="self-start flex flex-grow justify-end md:hidden">
             <a
               id="toggleMenu"
-              class="text-4xl h-full font-semibold whitespace-nowrap p-2 text-[#E5FCAB] hover:text-[#AAFF01] transition-all duration-300 ease-in-out hover:scale-100 scale-90 opacity-70 hover:opacity-100 cursor-pointer box-border"
+              class="text-4xl font-semibold whitespace-nowrap p-2 text-[#E5FCAB] hover:text-[#AAFF01] transition-all duration-300 ease-in-out hover:scale-100 scale-90 opacity-70 hover:opacity-100 cursor-pointer box-border"
             >
               <svg
                 width="36"
@@ -93,51 +93,144 @@
           </div>
         </nav>
       </div>
-      <header
-        id="headerContainer"
-        class="w-full h-auto md:h-full grid grid-rows-[auto_auto_auto] md:grid-rows-[auto] grid-cols-1 md:grid-cols-2 justify-items-center md:justify-items-end blur-0 transition-all duration-300 md:items-center opacity-100"
+      <section
+        class="grid justify-items-center gap-2 grid-cols-2 md:grid-cols-5 md:grid-rows-[120px_160px_160px] p-4 md:p-0 box-border min-w-[400px] [&>div>h2]:font-bold md:h-[640px] md:content-center"
       >
         <div
-          id="heroPicContainer"
-          class="flex items-center max-h-[35rem] md:h-full max-w-[35rem] min-[500px]:min-h-[520px] min-w-[320px] min-h-[380px] row-start-3 row-end-4 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2"
+          class="grid text-[#13151a] h-80 w-80 p-4 justify-items-center col-start-1 col-end-3 md:row-start-2 md:row-end-4 md:col-start-1 md:col-end-3"
         >
           <img
-            id="heroPic"
-            class="w-full md:w-auto h-full md:h-full transition-all duration-300 p-5"
-            src="./src/assets/weather-hero.svg"
-            alt=""
+            class="h-full min-h-full max-h- w-full min-w-80"
+            src="../src/assets/weather-about.svg"
+            alt="weather-about-pic"
           />
         </div>
         <div
-          id="titleContainer"
-          class="flex flex-col items-center md:items-end gap-3 col-start-1 col-end-2 md:col-start-2 md:col-end-3 md:pr-4"
+          class="bg-[#AAFF01] grid text-[#13151a] h-auto w-full px-4 py-2 rounded-tl-md md:rounded-t-md justify-items-center md:row-start-1 md:row-end-2 md:col-start-1 md:col-end-6"
         >
-          <h1
-            class="row-start-1 row-end-2 text-center md:text-start text-3xl text-[#AAFF01] md:col-start-2 md:col-end-3"
-          >
-            Weather App
-          </h1>
-          <p
-            class="row-start-2 row-end-3 md:row-start-1 md:row-end-2 col-start-1 col-end-2 md:col-start-2 md:col-end-3 text-center md:text-start text-xl text-[#E5FCAB] px-8 md:px-0"
-          >
-            Connecting You to Global Weather
+          <h2>Weather App Project</h2>
+          <p>
+            Practicing event handling, obtaining and inserting the information
+            obtained from the API.
           </p>
-          <a
-            class="group relative inline-block overflow-hidden border border-[#AAFF01] rounded-md px-6 py-2 focus:outline-none focus:ring transition-all duration-300"
-            href="./public/app.html"
-          >
-            <span
-              class="absolute inset-y-0 left-0 w-[2px] bg-[#AAFF01] transition-all duration-300 group-hover:w-full group-active:bg-[#E5FCAB]"
-            ></span>
-
-            <span
-              class="relative text-sm font-medium text-[#AAFF01] transition-colors duration-300 group-hover:text-[#13151a]"
-            >
-              Check Weather
-            </span>
-          </a>
         </div>
-      </header>
+        <div
+          class="bg-[#AAFF01] grid text-[#13151a] h-auto w-full px-4 py-2 rounded-tr-md justify-items-center md:col-start-3 md:col-end-6 md:rounded-none"
+        >
+          <h2>API Info</h2>
+          <p>
+            The Weather API which is used in this project is from
+            <a
+              class="font-bold text-green-950"
+              href="https://openweathermap.org/"
+              >Open Weather Map</a
+            >.
+          </p>
+        </div>
+        <div
+          class="bg-[#AAFF01] grid col-start-1 md:col-start-3 col-end-3 md:col-end-6 md:row-start-3 md:row-end-4 text-[#13151a] h-auto w-full px-4 py-2 justify-items-center rounded-b-md md:rounded-bl-none"
+        >
+          <h2>Used technologies</h2>
+          <ul
+            class="flex items-center gap-2 h-16 [&>li>a]:flex [&>li>a]:flex-col [&>li>a]:items-center [&>li>a]:w-auto [&>li>a]:p-2"
+          >
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
+                title="HTML"
+              >
+                <svg
+                  class="border-[#AAFF01] border-2 border-solid rounded hover:border-[#13151A] transition-colors duration-200"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                  <path
+                    d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"
+                  ></path>
+                </svg>
+                <p>HTML</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://tailwindcss.com/" title="TailwindCSS">
+                <svg
+                  class="border-[#AAFF01] border-2 border-solid rounded hover:border-[#13151A] transition-colors duration-200"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z"
+                  ></path>
+                </svg>
+                <p>TailwindCSS</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.aprendejavascript.dev/" title="JavaScript">
+                <svg
+                  class="border-[#AAFF01] border-2 border-solid rounded hover:border-[#13151A] transition-colors duration-200"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                  <path d="M7.5 8h3v8l-2 -1"></path>
+                  <path
+                    d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5"
+                  ></path>
+                </svg>
+                <p>JavaScript</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://nodejs.org/es" title="Node Package Manager">
+                <svg
+                  class="border-[#AAFF01] border-2 border-solid rounded hover:border-[#13151A] transition-colors duration-200 px-1"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M1 8h22v7h-12v2h-4v-2h-6z"></path>
+                  <path d="M7 8v7"></path>
+                  <path d="M14 8v7"></path>
+                  <path d="M17 11v4"></path>
+                  <path d="M4 11v4"></path>
+                  <path d="M11 11v1"></path>
+                  <path d="M20 11v4"></path>
+                </svg>
+                <p>NPM</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
       <footer
         id="footer"
         class="flex flex-col md:flex-row md:justify-between justify-center items-center h-[120px] md:h-20 border-t-[1px] border-[#E5FCAB]/10 text-[#E5FCAB] mt-auto"
@@ -225,6 +318,6 @@
         </p>
       </footer>
     </div>
-    <script src="./src/index.js"></script>
+    <script src="../src/about.js"></script>
   </body>
 </html>

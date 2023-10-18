@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../public/Logo.png" type="image/x-icon" />
   </head>
   <body
+    id="body"
     class="bg-[#13151a] h-screen min-w-[320px] box-border transition-all duration-300"
   >
     <div class="w-full md:w-4/5 h-full flex flex-col justify-center mx-auto">
@@ -48,6 +49,13 @@
           >
             <li>
               <a
+                href="../index.html"
+                class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-xl cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
                 href="./app.html"
                 class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-xl cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
                 >App</a
@@ -55,16 +63,9 @@
             </li>
             <li>
               <a
-                href="../index.html"
-                class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-xl cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="./contact.html"
+                href="./about.html"
                 class="flex justify-center text-[#E5FCAB] hover:text-[#AAFF01] text-lg cursor-pointer hover:bg-[#E5FCAB]/30 focus:ring-4 focus:outline-none focus:ring-[#AAFF01]/50 font-medium rounded-full px-3 py-1 text-center items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-70 hover:opacity-100"
-                >Contact</a
+                >About</a
               >
             </li>
           </ul>
@@ -95,9 +96,12 @@
       </div>
       <main
         id="mainContainer"
-        class="text-[#91D901] px-5 md:px-0 min-w-[320px] w-full blur-0 mb-0"
+        class="text-[#91D901] px-5 md:px-0 md:my-auto min-w-[320px] w-full blur-0 mb-0"
       >
-        <div id="searchSection" class="grid grid-cols-1 justify-items-center">
+        <div
+          id="searchSection"
+          class="grid grid-cols-1 justify-items-center md:mb-5"
+        >
           <div
             class="h-14 w-full min-w-[320px] flex justify-center items-center mx-1 p-2 transition-colors duration-200"
           >
@@ -164,7 +168,8 @@
             </div>
           </div>
           <div
-            class="w-full min-w-[320px] h-[160px] md:h-full mt-4 md:mt-0 grid grid-cols-3 md:grid-cols-2 md:grid-rows-5 gap-4 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3"
+            id="gadgetsContainer"
+            class="w-full min-w-[320px] h-[160px] md:h-full mt-4 md:mt-0 grid md:grid grid-cols-3 md:grid-cols-2 md:grid-rows-5 gap-4 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3"
           >
             <div
               class="flex flex-col justify-center items-center bg-gradient-to-b rounded-b-2xl from-[#13151A] via-[#91D901]/30 to-[#91D901]/80 text-white md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-4"
@@ -192,7 +197,9 @@
                 ></path>
               </svg>
               <div class="flex mt-1 items-center">
-                <p class="text-3xl mt-1" id="humidity">67</p>
+                <p class="text-3xl mt-1 text-[#13151A] font-bold" id="humidity">
+                  67
+                </p>
                 <p>%</p>
               </div>
               <p>Humidity</p>
@@ -207,7 +214,9 @@
                   >05</span
                 >
               </p>
-              <p id="showDate" class="text-4xl mt-1">29</p>
+              <p id="showDate" class="text-4xl font-bold mt-1 text-[#13151A]">
+                29
+              </p>
               <p>
                 <span id="showMonth" class="text-xl">Sept.</span>
                 <span id="showYear" class="text-xl">2023</span>
@@ -233,7 +242,9 @@
                 <path d="M4 16h5.5a2.5 2.5 0 1 1 -2.34 3.24"></path>
               </svg>
               <div class="flex mt-1 items-center">
-                <p class="text-3xl" id="windSpeed">18</p>
+                <p class="text-3xl font-bold text-[#13151A]" id="windSpeed">
+                  18
+                </p>
                 <p>k/m</p>
               </div>
               <p class="">Wind Speed</p>
@@ -315,11 +326,11 @@
         <ul
           class="flex h-8 items-center [&>li]:mx-[5px] [&>li]:h-full [&>li]:flex [&>li]:items-center [&>li>a]:p-1 hover:[&>li>a]:text-[#AAFF01] [&>li>a]:transition-colors [&>li>a]:duration-300"
         >
-          <li><a href="../index.html">About</a></li>
+          <li><a href="../index.html">Home</a></li>
           <span class="text-[#AAFF01] text-2xl">·</span>
-          <li><a href="../public/app.html">App</a></li>
+          <li><a href="./app.html">App</a></li>
           <span class="text-[#AAFF01] text-2xl">·</span>
-          <li><a href="../public/contact.html">Contact</a></li>
+          <li><a href="./about.html">About</a></li>
         </ul>
         <p class="flex items-center opacity-60 pr-2">
           Designed with 💚 by <span class="text-[#AAFF01] text-2xl"> · </span>
